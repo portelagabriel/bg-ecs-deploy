@@ -3,7 +3,7 @@
   "containerDefinitions": [
       {
           "name": "sample-website",
-          "image": "964463549243.dkr.ecr.us-east-1.amazonaws.com/nrlk-lgpd-test:latest",
+          "image": "<IMAGE1_NAME>",
           "essential": true,
           "portMappings": [
               {
