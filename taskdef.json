@@ -5,11 +5,12 @@
           "name": "sample-website",
           "image": "<IMAGE1_NAME>",
           "essential": true,
+          "memoryReservation": 512,
           "portMappings": [
               {
                   "hostPort": 80,
                   "protocol": "tcp",
-                  "containerPort": 80
+                  "containerPort": 3000
               }
           ]
       }
@@ -18,7 +19,7 @@
       "EC2"
   ],
   "networkMode": "host",
-  "cpu": "1024",
-  "memory": "750",
+  "cpu": "256",
+  "memory": "512",
   "family": "ecs-demo"
 }
