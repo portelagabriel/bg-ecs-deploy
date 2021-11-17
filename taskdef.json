@@ -18,7 +18,7 @@
   "requiresCompatibilities": [
       "EC2"
   ],
-  "networkMode": "host",
+  "networkMode": "awsvpc",
   "cpu": "256",
   "memory": "512",
   "family": "ecs-demo"
