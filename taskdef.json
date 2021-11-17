@@ -1,0 +1,24 @@
+{
+  "executionRoleArn": "arn:aws:iam::964463549243:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+      {
+          "name": "sample-website",
+          "image": "964463549243.dkr.ecr.us-east-1.amazonaws.com/nrlk-lgpd-test:latest",
+          "essential": true,
+          "portMappings": [
+              {
+                  "hostPort": 80,
+                  "protocol": "tcp",
+                  "containerPort": 80
+              }
+          ]
+      }
+  ],
+  "requiresCompatibilities": [
+      "EC2"
+  ],
+  "networkMode": "host",
+  "cpu": "1024",
+  "memory": "750",
+  "family": "ecs-demo"
+}
