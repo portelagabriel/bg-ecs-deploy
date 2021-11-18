@@ -1,10 +1,10 @@
 {
-    "taskDefinition": "ecs-demo:7",
-    "cluster": "nrlk-test",
+    "taskDefinition": "nginx-tdefinition:1",
+    "cluster": "nrlk-lgpd-test",
     "loadBalancers": [
         {
-            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:964463549243:targetgroup/tg-ip-nrlk-test/d4795b9ca4884d1f",
-            "containerName": "sample-website",
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:964463549243:targetgroup/tg-nrlk-lgpd-1/1f1c90bd4c281baf",
+            "containerName": "nginx-container",
             "containerPort": 80
         }
     ],
@@ -17,11 +17,11 @@
     "networkConfiguration": {
         "awsvpcConfiguration": {
             "subnets": [
-                "subnet-08194f1de31a75d93",
-                "subnet-0bad85e1b5e1f59a6"
+                "subnet-0e5b741e66e5c4f08",
+                "subnet-0593b7d4df17f9934"
             ],
             "securityGroups": [
-                "sg-0fa7e03f9cdb00015"
+                "sg-0f5e1f553ca68b639"
             ]
         }
     }
