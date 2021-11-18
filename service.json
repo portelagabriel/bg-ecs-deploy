@@ -1,0 +1,28 @@
+{
+    "taskDefinition": "ecs-demo:7",
+    "cluster": "nrlk-test",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:964463549243:targetgroup/tg-ip-nrlk-test/d4795b9ca4884d1f",
+            "containerName": "sample-website",
+            "containerPort": 80
+        }
+    ],
+    "desiredCount": 1,
+    "launchType": "EC2",
+    "schedulingStrategy": "REPLICA",
+    "deploymentController": {
+        "type": "CODE_DEPLOY"
+    },
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-08194f1de31a75d93",
+                "subnet-0bad85e1b5e1f59a6"
+            ],
+            "securityGroups": [
+                "sg-0fa7e03f9cdb00015"
+            ]
+        }
+    }
+}
